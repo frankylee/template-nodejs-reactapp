@@ -25,8 +25,8 @@ app.use(koaStatic(path.join(__dirname, '/client/build')));
 
 // Catch invalid requests
 app.use(async (ctx) => { 
-  await koaSend(ctx, '/index.html', { root: path.join(__dirname, '/client/build') })
-})
+  await koaSend(ctx, '/index.html', { root: path.join(__dirname, '/client/build') });
+});
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
